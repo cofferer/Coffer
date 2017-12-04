@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.lakmal.coffer.UI.Browse">
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="50dp"
+
+        android:maxWidth="356dp"></android.support.v7.widget.SearchView>
+
+    <Button
+        android:id="@+id/searchbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/other_spinner"
+        android:layout_centerHorizontal="true"
+        android:text="search" />
+
+    <Spinner
+        android:id="@+id/bank_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/search"
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"
+        android:layout_marginTop="34dp" />
+
+    <Spinner
+        android:id="@+id/card_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bank_spinner"
+        android:layout_alignStart="@+id/bank_spinner"
+        android:layout_below="@+id/bank_spinner" />
+
+    <Spinner
+        android:id="@+id/other_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/card_spinner"
+        android:layout_alignStart="@+id/card_spinner"
+        android:layout_below="@+id/card_spinner" />
+
+    <TextView
+        android:id="@+id/cardtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bank_spinner"
+        android:paddingLeft="30dp"
+        android:text="Card Type" />
+
+    <TextView
+        android:id="@+id/other"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_spinner"
+        android:paddingLeft="30dp"
+        android:text="other" />
+
+    <TextView
+        android:id="@+id/banks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/bank_spinner"
+        android:paddingLeft="30dp"
+        android:text="banks" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rec_list_browse"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/searchbtn"
+        android:layout_marginTop="17dp">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rec_list"
+        android:layout_toEndOf="@+id/cardtype"
+        android:layout_toRightOf="@+id/cardtype">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="60dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="26dp"
+            android:text="BROWSE"
+            android:textSize="20dp" />
+    </RelativeLayout>
+
+</RelativeLayout>
